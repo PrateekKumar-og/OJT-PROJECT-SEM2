@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>User Dashboard</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+        }
+
+        /* Layout */
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 240px;
+            background: #2f3e4e;
+            color: white;
+            padding-top: 20px;
+        }
+
+        .menu {
+            padding: 15px 25px;
+            cursor: pointer;
+        }
+
+        .menu:hover {
+            background: #3f5163;
+        }
+
+        .active {
+            background: #3f5163;
+        }
+
+        /* Main */
+        .main {
+            flex: 1;
+            padding: 40px;
+        }
+
+        /* Header */
+        .header {
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        /* Cards */
+        .cards {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            width: 260px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .card p {
+            margin: 0;
+            color: gray;
+        }
+
+        .card h3 {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        /* Empty State */
+        .empty-box {
+            background: white;
+            border-radius: 12px;
+            padding: 60px 20px;
+            text-align: center;
+            max-width: 900px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .empty-icon {
+            width: 120px;
+            height: 120px;
+            background: #e0e0e0;
+            margin: 0 auto 20px;
+            border-radius: 10px;
+        }
+
+        .empty-box h2 {
+            margin-bottom: 10px;
+        }
+
+        .empty-box p {
+            color: gray;
+            margin-bottom: 25px;
+        }
+
+        /* Button */
+        .btn {
+            padding: 14px 25px;
+            border: none;
+            border-radius: 8px;
+            background: #3498db;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="menu active">Dashboard</div>
+            <div class="menu">Apply Loan</div>
+            <div class="menu">Repayment</div>
+            <div class="menu">Transactions</div>
+            <div class="menu">Support</div>
+        </div>
+
+        <!-- Main -->
+        <div class="main">
+
+            <div class="header">Hi, User</div>
+
+            <!-- Cards -->
+            <div class="cards">
+                <div class="card">
+                    <p>Total Loan Amount</p>
+                    <h3>$17M</h3>
+                </div>
+
+                <div class="card">
+                    <p>EMI Due</p>
+                    <h3>$6</h3>
+                </div>
+
+                <div class="card">
+                    <p>Next Payment Date</p>
+                    <h3>$1</h3>
+                </div>
+            </div>
+
+            <!-- Empty State -->
+            <div class="empty-box">
+                <div class="empty-icon"></div>
+
+                <h2>No Active Loans</h2>
+                <p>
+                    It looks like you don't have any active loans.<br>
+                    Ready to get started?
+                </p>
+
+                <button class="btn">Apply for Loan</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

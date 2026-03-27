@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Repayment Dashboard</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+        }
+
+        /* Layout */
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 240px;
+            background: #2f3e4e;
+            color: white;
+            padding-top: 20px;
+        }
+
+        .menu {
+            padding: 15px 25px;
+            cursor: pointer;
+        }
+
+        .menu:hover {
+            background: #3f5163;
+        }
+
+        .active {
+            background: #3f5163;
+        }
+
+        /* Main */
+        .main {
+            flex: 1;
+            padding: 40px;
+        }
+
+        /* Header */
+        .header {
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        /* Cards */
+        .cards {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            width: 260px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .card p {
+            color: gray;
+            margin: 0;
+        }
+
+        .card h3 {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        /* Table Section */
+        .section-title {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            max-width: 1000px;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background: #f1f1f1;
+        }
+
+        /* Pay Button */
+        .pay-btn {
+            background: #27ae60;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .pay-btn:hover {
+            background: #219150;
+        }
+
+        /* Download Button */
+        .download {
+            margin-top: 30px;
+        }
+
+        .download button {
+            padding: 15px 25px;
+            background: #34495e;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .download button:hover {
+            background: #2c3e50;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="menu">Dashboard</div>
+            <div class="menu">Apply Loan</div>
+            <div class="menu active">Repayment</div>
+            <div class="menu">Transactions</div>
+            <div class="menu">Support</div>
+        </div>
+
+        <!-- Main -->
+        <div class="main">
+
+            <div class="header">Repayment Overview</div>
+
+            <!-- Cards -->
+            <div class="cards">
+                <div class="card">
+                    <p>Outstanding Balance</p>
+                    <h3>$205,000</h3>
+                </div>
+
+                <div class="card">
+                    <p>Total Paid</p>
+                    <h3>$95,000</h3>
+                </div>
+
+                <div class="card">
+                    <p>Next EMI Due</p>
+                    <h3>$1,680</h3>
+                </div>
+            </div>
+
+            <!-- Table -->
+            <div class="section-title">EMI Schedule</div>
+
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Transaction ID</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>20M</td>
+                    <td>$205000</td>
+                    <td>$1680</td>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>20M</td>
+                    <td>Pending</td>
+                    <td>$1080</td>
+                </tr>
+
+                <tr>
+                    <td>X</td>
+                    <td>20M</td>
+                    <td>$125000</td>
+                    <td><button class="pay-btn">Pay Now</button></td>
+                </tr>
+
+                <tr>
+                    <td>3X</td>
+                    <td>30M</td>
+                    <td>$165000</td>
+                    <td><button class="pay-btn">Pay Now</button></td>
+                </tr>
+            </table>
+
+            <!-- Download -->
+            <div class="download">
+                <button>Download Statement</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
